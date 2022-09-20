@@ -1,0 +1,16 @@
+.markdown {
+  padding: 16px;
+
+  h1 {
+    color: #0068c3;
+  }
+
+  a {
+    color: #0068c3;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+

@@ -1,3 +1,3 @@
 ---
-title: How-to Articles
+title: How-To Articles
 ---

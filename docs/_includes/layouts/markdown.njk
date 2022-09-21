@@ -1,34 +1,47 @@
 ---
 layout: 'layouts/base.njk'
 ---
-{% macro nav(item) %}
-  {% if item.filePathStem.startsWith(navigationTree) %}
-    {# {% debug item %} #}
+{%- macro nav(item, index) -%}
+  {%- if item.filePathStem.startsWith(navigationTree) and item.filePathStem !== [navigationTree, "index"] | join -%}
     <div>
-      <a href="{{ item.url }}">{{ item.title }}</a>
+      {%- if item.hasData -%}
+        <a class="nav-item level-{{ index }}" href="{{ item.url }}">{{- item.title -}}</a>
+      {%- endif -%}
+      {%- if item.children.length > 0 -%}
+        {%- if not item.hasData -%}
+          <button class="nav-item level-{{ index }}" href="{{ item.url }}">{{- item.title -}}</button>
+        {%- endif -%}
+        <div>
+          {%- for subItem in item.children -%}
+            {{- nav(subItem, loop.index + index) -}}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
     </div>
-  {% endif %}
+  {%- else -%}
+    {%- if item.children.length > 0 -%}
+      {%- for subItem in item.children -%}
+        {{- nav(subItem, 1) -}}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endmacro -%}
 
-  {% if item.children.length > 0 %}
-    {% for subItem in item.children %}
-      {{ nav(subItem) }}
-    {% endfor %}
-  {% endif %}
-{% endmacro %}
-
-
-{% if navigationTree %}
-  <div>
+{%- if navigationTree -%}
+  <div class="navigation">
     <nav>
-      {% for item in collections.eleventyNavigationTree %}
-        {{ nav(item) }}
-      {% endfor %}
+      {%- for item in collections.eleventyNavigationTree -%}
+        {{- nav(item, loop.index) -}}
+      {%- endfor -%}
     </nav>
   </div>
-{% endif %}
+{%- endif -%}
 
 <main class="markdown">
-  <h1>{{ title }}</h1>
+  <div>
+    <h1>{{- title -}}</h1>
+    
+  <div>
 
-  {{ content | safe }}
+  {{- content | safe -}}
 </main>

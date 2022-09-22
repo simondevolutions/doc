@@ -2,7 +2,12 @@
   padding: 16px;
 
   h1 {
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
     color: #0068c3;
+    display: flex;
+    margin: -16px -16px 16px;
+    max-width: inherit;
+    padding: 8px 16px;
   }
 
   a {

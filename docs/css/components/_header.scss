@@ -18,7 +18,7 @@
   display: flex;
   height: 72px;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 20px;
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -28,7 +28,6 @@
 
   @media (max-width: 1024px) {
     height: 52px;
-    padding: 0 20px;
   }
 
   .dwd-header-wrapper {

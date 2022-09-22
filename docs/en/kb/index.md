@@ -1,1 +1,3 @@
-# KB Home Page
+---
+title: Knowledge Base
+---

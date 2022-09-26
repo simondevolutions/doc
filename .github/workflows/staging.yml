@@ -1,0 +1,14 @@
+name: staging
+on:
+  push:
+    branches: ['master']
+  workflow_dispatch:
+
+jobs:
+  staging:
+    uses: ./.github/workflows/shared.yml
+    with:
+      clusterName: staging
+      environment: staging
+      subscriptionId: a07f60a2-416e-42c7-87a5-5f046bf0ddee # Devolutions Staging
+    secrets: inherit

@@ -1,0 +1,114 @@
+name: shared workflow
+
+on:
+  workflow_call:
+    inputs:
+      clusterName:
+        required: true
+        default: staging
+        type: string
+      environment:
+        required: true
+        type: string
+      subscriptionId:
+        required: true
+        type: string
+    secrets:
+      AZURE_TENANT_ID:
+        required: true
+      DEVOLUTIONSBOT_TOKEN:
+        required: true
+      DOCKERHUB_TOKEN:
+        required: true
+      DOCKERHUB_USERNAME:
+        required: true
+      TAILSCALE_AUTH_KEY_EPHEMERAL:
+        required: true
+      TERRAFORM_AUTOMATOR_CLIENT_ID:
+        required: true
+      TERRAFORM_AUTOMATOR_CLIENT_SECRET:
+        required: true
+
+concurrency: ${{ inputs.environment }}
+
+jobs:
+  build:
+    environment: ${{ inputs.environment }}
+    outputs:
+      tag: ${{ steps.variables.outputs.tag }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out ${{ github.repository }}
+        uses: actions/checkout@v3
+
+      - name: Set variables
+        id: variables
+        run: |
+          echo "::set-output name=tag::latest"
+          if [[ "${{ inputs.environment }}" == "production" ]]; then
+            echo "::set-output name=tag::$(git rev-parse --short HEAD)"
+          fi
+        shell: bash
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push to DockerHub
+        id: docker_push
+        uses: docker/build-push-action@v3
+        with:
+          file: ./ci/Dockerfile
+          labels: commitid=${{ github.sha }}
+          push: true
+          tags: devolutions/docs:${{ steps.variables.outputs.tag }}
+
+      - name: Image digest
+        run: echo ${{ steps.docker_push.outputs.digest }}
+
+  deploy:
+    environment: ${{ inputs.environment }}
+    needs: ["build"]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Devolutions/k8s-as-code
+        uses: actions/checkout@v3
+        with:
+          repository: Devolutions/k8s-as-code
+          token: ${{ secrets.DEVOLUTIONSBOT_TOKEN }}
+
+      - name: Check out Devolutions/actions
+        uses: actions/checkout@v3
+        with:
+          path: ./.github/workflows
+          repository: Devolutions/actions
+          token: ${{ secrets.DEVOLUTIONSBOT_TOKEN }}
+
+      - name: Install toolbox
+        uses: ./.github/workflows/toolbox-install
+        with:
+          token: ${{ secrets.DEVOLUTIONSBOT_TOKEN }}
+
+      - name: Connect to Tailscale
+        uses: ./.github/workflows/tailscale
+        with:
+          authKey: ${{ secrets.TAILSCALE_AUTH_KEY_EPHEMERAL }}
+
+      - name: Deploy with kustomize
+        uses: ./.github/workflows/kustomize-deploy-public
+        with:
+          azureClientId: ${{ secrets.TERRAFORM_AUTOMATOR_CLIENT_ID }}
+          azureClientSecret: ${{ secrets.TERRAFORM_AUTOMATOR_CLIENT_SECRET }}
+          azureTenantId: ${{ secrets.AZURE_TENANT_ID }}
+          azureSubscriptionId: ${{ inputs.subscriptionId }}
+          context: ${{ inputs.clusterName }}
+          environment: ${{ inputs.environment }}
+          imageName: devolutions/docs:${{needs.build.outputs.tag}}
+          namespace: docs
+          path: apps/docs/manifests
+          token: ${{ secrets.DEVOLUTIONSBOT_TOKEN }}
+          useCustomImage: true

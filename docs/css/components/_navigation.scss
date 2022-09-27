@@ -15,6 +15,7 @@
   }
 
   .nav-item {
+    align-items: center;
     background-color: transparent;
     color: #212121;
     border: none;
@@ -37,6 +38,27 @@
       &.level-#{$i} {
         padding-left: (20 + $i * 8) + px;
       }
+    }
+
+    &.active {
+      svg {
+        transform: rotate(0deg);
+      }
+    }
+
+    svg {
+      margin-left: auto;
+      transform: rotate(-90deg);
+    }
+  }
+
+  .nav-item-items {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.25s ease;
+
+    &.active {
+      height: auto;
     }
   }
 }

@@ -12,16 +12,23 @@ You would like to have access to a one click **Custom Tool** which would apply a
 
 The method below, will give you a quick access in RDM’s Dashboard **Macros/Scripts/Tools** section of the entry. It will allow you to click on the **Custom Tool** and open the connection that currently has focus with the parameters specified in your **Templates**.
 
+> In order to use this method, you will first need to create a **Template** under **File - Templates**. For more information, please consult this link.
+
+> The **Template** that you will create (Database template only) will need to have the option **Available in Macros/Scripts/Tools** enabled in the **Template Settings - Availability** section in order for it to be shown in your **Dashboard**.
+
 ![](https://kb.devolutions.net/images/kb4667.png)
 
 ## Method
 
 1. In the **Ribbon**, go under **Edit - New Entry - Add Macros/Scripts/Tools**.  
 ![](https://kb.devolutions.net/images/kb5002.png)
+
 2. Select **Template Macro/Script/Tool** in the **Tool** section and click **OK**.  
 ![](https://kb.devolutions.net/images/kb5003.png)
+
 3. In the **General** tab, use the ellipsis button to select the **Template** you created and click **OK** when done.  
 ![](https://kb.devolutions.net/images/kb4668.png)
+
 4. The **Template (Macro/Script/Tool)** entry you just created can be found under the **Macros/Scripts/Tools** section of your entry **Dashboard** when you select one of your entries in your **Navigation Pane**.  
 ![](https://kb.devolutions.net/images/kb4669.png)
 

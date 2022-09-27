@@ -9,6 +9,8 @@ module.exports = function (config) {
   config.addPlugin(eleventyShortcode);
   config.addPlugin(eleventyNavigationTree);
 
+  config.addPassthroughCopy('img');
+
   return {
     dir: {
       input: 'docs',

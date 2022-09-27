@@ -41,6 +41,8 @@
     }
 
     &.active {
+      color: #0068c3;
+
       svg {
         transform: rotate(0deg);
       }

@@ -3,17 +3,25 @@ layout: 'layouts/base.njk'
 ---
 {%- macro nav(item, index) -%}
   {%- if item.filePathStem.startsWith(navigationTree) and item.filePathStem !== [navigationTree, "index"] | join -%}
-    <div>
+    <div class="nav-item-container">
       {%- if item.hasData -%}
-        <a class="nav-item level-{{ index }}" href="{{ item.url }}">{{- item.title -}}</a>
+        <a class="nav-item level-{{ index }} {{ 'active' if page.url.startsWith(item.url) }}" href="{{ item.url }}" {{ ['data-dwd-tab data-dwd-tab-group=', item.url,' data-dwd-tab-target=', item.url] | join if item.children.length > 0 }}>
+          {{- item.title -}}
+          {%- if item.children.length > 0 -%}
+            {{- icon['expand-more'] | safe -}}
+          {%- endif -%}
+        </a>
       {%- endif -%}
       {%- if item.children.length > 0 -%}
         {%- if not item.hasData -%}
-          <button class="nav-item level-{{ index }}" href="{{ item.url }}">{{- item.title -}}</button>
+          <button class="nav-item level-{{ index }} {{ 'active' if page.url.startsWith(item.url) }}" href="{{ item.url }}" data-dwd-tab data-dwd-tab-group="{{ item.url }}" data-dwd-tab-target="{{ item.url }}">
+            {{- item.title -}}
+            {{- icon['expand-more'] | safe -}}
+          </button>
         {%- endif -%}
-        <div>
+        <div class="nav-item-items {{ 'active' if page.url.startsWith(item.url) }}" data-dwd-tab-group="{{ item.url }}" data-dwd-tab-target="{{ item.url }}">
           {%- for subItem in item.children -%}
-            {{- nav(subItem, loop.index + index) -}}
+            {{- nav(subItem, index + 1) -}}
           {%- endfor -%}
         </div>
       {%- endif -%}
@@ -40,7 +48,6 @@ layout: 'layouts/base.njk'
 <main class="markdown">
   <div>
     <h1>{{- title -}}</h1>
-    
   <div>
 
   {{- content | safe -}}

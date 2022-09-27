@@ -9,13 +9,25 @@
     }
   }
 
-  h1 {
+  .title {
+    align-items: center;
     border-bottom: 1px solid rgba(0, 0, 0, .12);
-    color: #0068c3;
     display: flex;
+    flex: 1;
     margin: -16px -16px 16px;
-    max-width: inherit;
     padding: 8px 16px;
+    width: calc(100% + 32px);
+
+    h1 {
+      color: #0068c3;
+    }
+
+    a {
+      align-items: center;
+      display: inline-flex;
+      margin-top: 0;
+      margin-left: auto;
+    }
   }
 
   a {

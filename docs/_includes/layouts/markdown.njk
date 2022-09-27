@@ -46,9 +46,12 @@ layout: 'layouts/base.njk'
 {%- endif -%}
 
 <main class="markdown">
-  <div>
+  <div class="title">
     <h1>{{- title -}}</h1>
-  <div>
+    <a href="{{ config.githubEdit }}{{ page.inputPath }}" target="_blank">
+      {{ icon['edit'] | safe }}
+    </a>
+  </div>
 
   {{- content | safe -}}
 </main>

@@ -30,6 +30,26 @@
     }
   }
 
+  .video {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+
+      iframe {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+
   a {
     color: #0068c3;
 

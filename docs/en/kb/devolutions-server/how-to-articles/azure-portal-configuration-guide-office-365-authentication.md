@@ -2,6 +2,8 @@
 title: Azure Portal Configuration Guide Office365 Authentication
 ---
 
+{% youtube 'dgN79oNfXKk' %}
+
 ## Description
 
 > Office365 Authentication will be deprecated by Microsoft this coming December 2022. It is being replaced with the Microsoft Authentication. For configuration information, please refer to the topic Azure Portal Configuration Guide Microsoft Authentication

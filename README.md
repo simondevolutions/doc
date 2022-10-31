@@ -33,4 +33,10 @@ order: 0-9 # Used for custom ordering in the navigation tree
 
 ### 11ty Shortcodes
 
-Coming Soon
+**YouTube Video**
+
+To embed a YouTube video use the following shortcode, and use the video id as the parameter.
+
+```
+{% youtube 'video_id' %}
+```

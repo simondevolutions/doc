@@ -8,7 +8,7 @@ Devolutions's documentations build with 11ty.
 
 ## Installation
 
-Using command line at the root of the project execute `npm i`
+Using command line at the root of the project execute `npm i`.
 
 ## Getting Started
 
@@ -31,12 +31,23 @@ order: 0-9 # Used for custom ordering in the navigation tree
 ## Markdown Content
 ```
 
-### 11ty Shortcodes
+### Variables
+
+You can use variables that are listed in the folder [_data](https://github.com/Devolutions/doc/tree/master/docs/_data).
+
+example
+```markdown
+{{ en.AGENT }}
+## {{ en.AGENT }} Description
+...
+```
+
+### Shortcodes
 
 **YouTube Video**
 
 To embed a YouTube video use the following shortcode, and use the video id as the parameter.
 
-```
+```markdown
 {% youtube 'video_id' %}
 ```

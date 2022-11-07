@@ -6,15 +6,41 @@ title: Azure Portal Configuration Guide Office365 Authentication
 
 ## Description
 
-{% snippet icon.github %}
+{% snippet icon.badgeCaution %}
 Office365 Authentication will be deprecated by Microsoft this coming December 2022. It is being replaced with the Microsoft Authentication. For configuration information, please refer to the topic [Azure Portal Configuration Guide Microsoft Authentication](https://kb.devolutions.net/kb_azure_portal_configuration_guide_microsoft_authentication.html)
 {% endsnippet %}
 
-{% snippet %}
+{% snippet icon.badgeHelp %}
 This topic is for Devolutions Server version 2022.1 and older, for newer version please refer to Azure Portal Configuration Guide Microsoft Authentication.
 {% endsnippet %}
 
-> Microsoft Azure AD subscription is required to configure Office365 authentication in Devolutions Server.
+{% snippet icon.badgeInfo %}
+Microsoft Azure AD subscription is required to configure Office365 authentication in Devolutions Server.
+{% endsnippet %}
+
+{% snippet icon.badgeNotice %}
+Microsoft Azure AD subscription is required to configure Office365 authentication in Devolutions Server.
+{% endsnippet %}
+
+{% snippet icon.badgeWarning %}
+Microsoft Azure AD subscription is required to configure Office365 authentication in Devolutions Server.
+{% endsnippet %}
+
+{% snippet icon.shieldCaution %}
+Microsoft Azure AD subscription is required to configure Office365 authentication in Devolutions Server.
+{% endsnippet %}
+
+{% snippet icon.shieldInfo %}
+Microsoft Azure AD subscription is required to configure Office365 authentication in Devolutions Server.
+{% endsnippet %}
+
+{% snippet icon.shieldNotice %}
+Microsoft Azure AD subscription is required to configure Office365 authentication in Devolutions Server.
+{% endsnippet %}
+
+{% snippet icon.shieldWarning %}
+Microsoft Azure AD subscription is required to configure Office365 authentication in Devolutions Server.
+{% endsnippet %}
 
 The following topic contains the procedure to configure Azure and Devolutions Server properly to use Office365 authentication.
 

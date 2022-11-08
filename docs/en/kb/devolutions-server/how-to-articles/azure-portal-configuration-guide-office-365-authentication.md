@@ -1,5 +1,6 @@
 ---
 title: Azure Portal Configuration Guide Office365 Authentication
+order: 0
 ---
 
 {% youtube 'dgN79oNfXKk' %}

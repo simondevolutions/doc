@@ -50,6 +50,28 @@
     }
   }
 
+  .snippet {
+    align-items: center;
+    border: 1px solid #999999;
+    display: flex;
+    padding: 16px;
+
+    svg {
+      height: 48px;
+      margin-right: 16px;
+      min-width: 48px;
+      width: 48px;
+    }
+
+    > div {
+      margin-top: 0;
+
+      > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   a {
     color: #0068c3;
 

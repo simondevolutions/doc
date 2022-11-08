@@ -8,7 +8,7 @@ layout: 'layouts/base.njk'
         <a class="nav-item level-{{ index }} {{ 'active' if page.url.startsWith(item.url) }}" href="{{ item.url }}" {{ ['data-dwd-tab data-dwd-tab-group=', item.url,' data-dwd-tab-target=', item.url] | join if item.children.length > 0 }}>
           {{- item.title -}}
           {%- if item.children.length > 0 -%}
-            {{- icon['expand-more'] | safe -}}
+            {{- icon['expandMore'] | safe -}}
           {%- endif -%}
         </a>
       {%- endif -%}
@@ -16,7 +16,7 @@ layout: 'layouts/base.njk'
         {%- if not item.hasData -%}
           <button class="nav-item level-{{ index }} {{ 'active' if page.url.startsWith(item.url) }}" href="{{ item.url }}" data-dwd-tab data-dwd-tab-group="{{ item.url }}" data-dwd-tab-target="{{ item.url }}">
             {{- item.title -}}
-            {{- icon['expand-more'] | safe -}}
+            {{- icon['expandMore'] | safe -}}
           </button>
         {%- endif -%}
         <div class="nav-item-items {{ 'active' if page.url.startsWith(item.url) }}" data-dwd-tab-group="{{ item.url }}" data-dwd-tab-target="{{ item.url }}">

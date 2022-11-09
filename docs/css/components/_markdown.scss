@@ -1,5 +1,5 @@
 .markdown {
-  padding: 16px;
+  padding: 24px 48px;
 
   * {
     margin-bottom: 0;
@@ -14,9 +14,9 @@
     border-bottom: 1px solid rgba(0, 0, 0, .12);
     display: flex;
     flex: 1;
-    margin: -16px -16px 16px;
-    padding: 8px 16px;
-    width: calc(100% + 32px);
+    margin: -24px -48px 24px;
+    padding: 8px 48px;
+    width: calc(100% + 96px);
 
     h1 {
       color: #0068c3;
@@ -34,7 +34,7 @@
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
-    
+
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -68,6 +68,28 @@
 
       > *:last-child {
         margin-bottom: 0;
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    position: relative;
+
+    &:hover {
+      .header-anchor {
+        opacity: 1;
+      }
+    }
+
+    .header-anchor {
+      color: #494949;
+      opacity: 0;
+      left: -22px;
+      position: absolute;
+
+      svg {
+        height: 18px;
+        width: 18px;
       }
     }
   }

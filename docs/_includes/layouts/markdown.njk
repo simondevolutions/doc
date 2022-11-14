@@ -2,7 +2,7 @@
 layout: 'layouts/base.njk'
 ---
 {%- macro nav(item, index) -%}
-  {%- if item.filePathStem.startsWith(navigationTree) and item.filePathStem !== [navigationTree, "index"] | join -%}
+  {%- if item.filePathStem and item.filePathStem.startsWith(navigationTree) and item.filePathStem !== [navigationTree, "index"] | join -%}
     <div class="nav-item-container">
       {%- if item.hasData -%}
         <a class="nav-item level-{{ index }} {{ 'active' if page.url.startsWith(item.url) }}" href="{{ item.url }}" {{ ['data-dwd-tab data-dwd-tab-group=', item.url,' data-dwd-tab-target=', item.url] | join if item.children.length > 0 }}>

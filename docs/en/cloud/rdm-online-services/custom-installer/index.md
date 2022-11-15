@@ -1,5 +1,5 @@
 ---
-title: Knowledge Base
-order: 20
+title: Custom Installer
+order: 10
 ---
 TBD

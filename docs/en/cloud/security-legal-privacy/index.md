@@ -1,4 +1,5 @@
 ---
-title: Devolutions Server
-order: 20
+title: Security, Legal & Privacy
+order: 80
 ---
+TBD

@@ -1,5 +1,5 @@
 ---
-title: Profile
+title: Profil
 order: 20
 ---
 TBD

@@ -1,5 +1,5 @@
 ---
-title: Security, Legal & Privacy
+title: Securité, légal & vie privée
 order: 80
 ---
 TBD

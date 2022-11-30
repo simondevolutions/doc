@@ -10,6 +10,7 @@ module.exports = function (config) {
   config.addPlugin(eleventyFilter);
   config.addPlugin(eleventyShortcodes);
   config.addPlugin(eleventyNavigationTree);
+  config.setQuietMode(true);
 
   config.addPassthroughCopy('img');
 

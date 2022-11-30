@@ -36,13 +36,11 @@ layout: 'layouts/base.njk'
 {%- endmacro -%}
 
 {%- if navigationTree -%}
-  <div class="navigation">
-    <nav>
-      {%- for item in collections.eleventyNavigationTree -%}
-        {{- nav(item, loop.index) -}}
-      {%- endfor -%}
-    </nav>
-  </div>
+  <nav class="navigation">
+    {%- for item in collections.eleventyNavigationTree -%}
+      {{- nav(item, loop.index) -}}
+    {%- endfor -%}
+  </nav>
 {%- endif -%}
 
 <main class="markdown">

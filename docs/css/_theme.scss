@@ -1,0 +1,10 @@
+:root,
+body {
+  --primary: #0068c3;
+  --primary-text: #ffffff;
+  --header-height: 72px;
+
+  @media (max-width: 1024px) {
+    --header-height: 52px;
+  }
+}

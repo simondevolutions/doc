@@ -1,0 +1,20 @@
+.grid-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+
+  > * {
+    border: 1px solid #eeeeee;
+    color: #000000;
+    flex: 0 0 calc(25% - 20px);
+    font-size: 18px;
+    margin: 10px;
+    max-width: calc(25% - 20px);
+    padding: 20px;
+    width: 100%;
+
+    &:hover {
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+    }
+  }
+}

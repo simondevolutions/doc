@@ -27,7 +27,7 @@ module.exports = (config) => {
       )
 
       const obj = {}
-      
+
       if (page) {
         obj.url = page.url;
         obj.filePathStem = page.filePathStem;

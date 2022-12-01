@@ -6,10 +6,12 @@
 // Cores
 @use "reset";
 @use "reboot";
+@use "theme";
 
 // Utilities
 
 // Components
+@use "components/grid-list";
 @use "components/header";
 @use "components/markdown";
 @use "components/navigation";

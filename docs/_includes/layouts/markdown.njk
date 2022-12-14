@@ -2,6 +2,8 @@
 layout: 'layouts/base.njk'
 ---
 {%- macro nav(item, index) -%}
+  {% set navigationTree = ['/', lang, '/', tree, '/'] | join %}
+
   {%- if item.filePathStem and item.filePathStem.startsWith(navigationTree) and item.filePathStem !== [navigationTree, "index"] | join -%}
     <div class="nav-item-container">
       {%- if item.hasData -%}
@@ -35,7 +37,7 @@ layout: 'layouts/base.njk'
   {%- endif -%}
 {%- endmacro -%}
 
-{%- if navigationTree -%}
+{%- if tree and page.url -%}
   <nav class="navigation">
     {%- for item in collections.eleventyNavigationTree -%}
       {{- nav(item, loop.index) -}}

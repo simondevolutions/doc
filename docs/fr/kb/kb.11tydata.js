@@ -1,6 +1,7 @@
 module.exports = function() {
   return {
     layout: 'layouts/markdown.njk',
-    navigationTree: '/fr/kb/'
+    trees: ['kb'],
+    tree: 'kb'
   }
 }

@@ -1,6 +1,7 @@
 module.exports = function() {
   return {
     layout: 'layouts/markdown.njk',
-    navigationTree: '/en/cloud/'
+    trees: ['cloud'],
+    tree: 'cloud'
   }
 }

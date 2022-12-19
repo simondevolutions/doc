@@ -1,7 +1,7 @@
 ---
 title: Devolutions Web Login
 order: 40
-description: Vous pouvez accéder aux catégories suivantes concernant Devolutions Web Login : Guides d'utilisation, Articles de dépannage et Base de connaissances
+description: Vous pouvez accéder aux catégories suivantes concernant Devolutions Web Login ':' Guides d'utilisation, Articles de dépannage et Base de connaissances
 ---
 # {{ fr.TOPICTITLE }} 
 <table>

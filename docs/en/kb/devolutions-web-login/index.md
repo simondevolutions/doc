@@ -1,12 +1,13 @@
 ---
 title: Devolutions Web Login
 order: 40
+description: You can consult topics for the following categories about Devolutions Web Login: How-To Articles, Troubleshooting Articles and Knowledge Base
 ---
 # {{ en.TOPICTITLE }} 
 <table>
 	<tr>
 		<td>
-<img src="/img/en/kb/ApplicationDWL_180X180.png" alt="Devolutions Web Login icon">
+<img src="https://webdevolutions.blob.core.windows.net/images/projects/web-login/logos/web-login-icon-shadow.svg" width="180" alt="Devolutions Web Login icon">
 		</td>
 		<td>
 You can consult topics for the following categories about {{ en.DWL }} : 

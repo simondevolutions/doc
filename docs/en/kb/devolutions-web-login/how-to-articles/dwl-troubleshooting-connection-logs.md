@@ -1,11 +1,12 @@
 ---
 title: DWL Troubleshooting Connection Logs
 ---
-# {{ en.TOPICTITLE }}
+
 When an issue occurs with {{ en.DWL }} , the support personnel may ask you to provide them logs in order to provide more information to our engineering department, please follow these steps:
+
 1. In your browser, right-click on the {{ en.DWL }} extension icon.
-2. Click on ***Manage Extension***
-3. Toggle on the ***Developer mode***  
+1. Click on ***Manage Extension***
+1. Toggle on the ***Developer mode***  
 ![KB4786.png](/img/en/kb/KB4786.png)
 1. In the same window, under ***Inspect views*** , click on the ***background/background.html*** link. This will open the browser ***DevTools*** window.  
 ![KB4787.png](/img/en/kb/KB4787.png)

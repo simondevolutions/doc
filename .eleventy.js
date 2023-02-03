@@ -2,9 +2,20 @@ const eleventyFilter = require('./utils/eleventy-filter');
 const eleventyNavigationTree = require('./utils/eleventy-navigation-tree');
 const eleventySass = require('./utils/eleventy-sass');
 const eleventyShortcodes = require('./utils/eleventy-shortcodes');
-const markdownIt = require('markdown-it')
+const markdownIt = require('markdown-it')({
+  html: true,
+  breaks: false,
+  linkify: true
+});
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownItAttrs = require('markdown-it-attrs');
+
+markdownIt.renderer.rules.table_open = function() {
+  return `<div class="table"><table>`
+}
+markdownIt.renderer.rules.table_close = function() {
+  return `</table></div>`
+}
 
 module.exports = function (config) {
   config.addPlugin(eleventySass);
@@ -15,12 +26,7 @@ module.exports = function (config) {
 
   config.addPassthroughCopy('img');
 
-  let options = {
-    html: true,
-    breaks: false,
-    linkify: true
-  }
-  config.setLibrary('md', markdownIt(options)
+  config.setLibrary('md', markdownIt
     .use(markdownItAnchor, {
       permalink:markdownItAnchor.permalink.ariaHidden({
         symbol: `

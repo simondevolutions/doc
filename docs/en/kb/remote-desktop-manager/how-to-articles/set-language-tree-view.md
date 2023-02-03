@@ -7,11 +7,11 @@ keywords:
 - location
 - region
 ---
-# {{ en.TOPICTITLE }} 
-In {{ en.RDM }}, you can specify a language (and a location) for the tree view in the ***{{ en.NPANE }}***. This is especially useful for languages that use characters other than or in addition to the A-Z alphabet.  
-{% snippet icon.badgeInfo %} 
-Note that the system on which {{ en.RDM }} is installed must support the specific language for it to work in {{ en.RDM }}. 
-{% endsnippet %} 
+In {{ en.RDM }}, you can specify a language (and a location) for the tree view in the ***{{ en.NPANE }}***. This is especially useful for languages that use characters other than or in addition to the A-Z alphabet.
+
+{% snippet icon.badgeInfo %}
+Note that the system on which {{ en.RDM }} is installed must support the specific language for it to work in {{ en.RDM }}.
+{% endsnippet %}
 
 1. In {{ en.RDM }}, go to ***File – Options – User Interface – Tree View***.  
 2. In the ***Tree view culture*** field, specify a ***Language tag***.  

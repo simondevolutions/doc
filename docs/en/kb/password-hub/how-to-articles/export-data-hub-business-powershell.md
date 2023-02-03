@@ -2,19 +2,22 @@
 eleventyComputed:
   title: Export Data from {{ en.PHUB }} Business with PowerShell
 ---
-# {{ en.TOPICTITLE }}
+
 In {{ en.PHUB }} Business, you can export your data in the Json or Csv format using a [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2&amp;viewFallbackFrom=powershell-7.1) script. This feature is accessible via the ***Tools*** tab, under the ***Export*** section.  
 ![Export with PowerShell.png](/img/en/kb/kb2079.png)
+
 ## Steps
-Before exporting your data, if not already done, [create an application user](https://helphub.devolutions.net/hub_manage_application_users.html) and assign it the ***Manager*** role to the vault wanted.  
+
+Before exporting your data, if not already done, [create an application user](https://helphub.devolutions.net/hub_manage_application_users.html) and assign it the ***Manager*** role to the vault wanted.
+
 {% snippet icon.badgeCaution %}
 Keep the ***Application Secret*** and ***Application key*** of your newly-created application user or retrieve them if your user was already set up, as they will be needed in the following steps.
-{% endsnippet %}  
+{% endsnippet %}
 
-Go to the section that corresponds to your needs:  
+Go to the section that corresponds to your needs:
 
-* <a href="#automatic">Automatically fill in the information</a> 
-* <a href="#manual">Manually fill in the information</a> 
+- [Automatically fill in the information](#automatic)
+- [Manually fill in the information](#manual)
 
 ### Automatically fill in the information
 <a name="automatic"></a>
@@ -35,52 +38,16 @@ Your data has been exported to the destination folder you specified in step 3.
 ![Manual Export.png](/img/en/kb/kb2081.png)
 1. Choose to export in ***Json*** or ***Csv*** format.
 1. Copy and paste the script in a PowerShell file (.ps1).
-1. In your copied script, change the variables with the appropriate information. See the table below.
-<table>
-	<tr>
-		<th>
-Variable
-		</th>
-		<th>
-Description
-		</th>
-	</tr>
-	<tr>
-		<td>
-$url
-		</td>
-		<td>
-Enter your Password Hub Business URL. This variable is automatically filled in, but it is still possible to change it.
-		</td>
-	</tr>
-	<tr>
-		<td>
-$appSecret
-		</td>
-		<td>
-Enter the application user&apos;s <b><i>Application Secret</i></b>
-		</td>
-	</tr>
-	<tr>
-		<td>
-$appKey
-		</td>
-		<td>
-Enter the application user&apos;s <b><i>Application key</i></b>
-		</td>
-	</tr>
-	<tr>
-		<td>
-$pathToExportedFolder
-		</td>
-		<td>
-Enter the <b><i>Destination folder path</i></b> This is where your data will be exported.
-		</td>
-	</tr>
-</table>
+1. In your copied script, change the variables with the appropriate information. See the table below.  
+   | Variable                | Description |
+   | ----------------------- | ----------- |
+   | `$url`                  | Enter your Password Hub Business URL. This variable is automatically filled in, but it is still possible to change it. |
+   | `$appSecret`            | Enter the application user's ***Application Secret*** |
+   | `$appKey`               | Enter the application user's ***Application key***    |
+   | `$pathToExportedFolder` | Enter the ***Destination folder path*** This is where your data will be exported. |
 
-![Variables in PowerShell](/img/en/kb/KB2082.png)
+   ![Variables in PowerShell](/img/en/kb/KB2082.png)
 
-5. Run the script using PowerShell 7.  
+5. Run the script using PowerShell 7.
 
 Your data has been exported to the destination folder specified in step 

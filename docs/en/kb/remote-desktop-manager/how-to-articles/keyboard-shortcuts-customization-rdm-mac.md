@@ -2,14 +2,15 @@
 eleventyComputed:
   title: Keyboard Shortcuts Customization in RDM {{ en.MAC }}
 ---
-# {{ en.TOPICTITLE }}
-In {{ en.RDM }} for {{ en.MAC }} , you can <a href="#modify">customize individual shortcuts</a> and <a href="#ignore">specify key combinations to be ignored</a> by embedded sessions. These options are found in ***File – Preferences – User Interface – Shortcuts***  
+In {{ en.RDM }} for {{ en.MAC }} , you can <a href="#modify">customize individual shortcuts</a> and <a href="#ignore">specify key combinations to be ignored</a> by embedded sessions. These options are found in ***File – Preferences – User Interface – Shortcuts***
+
 {% snippet icon.badgeInfo %}
 For a list of default values for shortcuts, visit our [Keyboard Shortcuts](https://helpmac.remotedesktopmanager.com/support_keyboardshortcuts.html) topic.
-{% endsnippet %}  
+{% endsnippet %}
 
 ![File - Preferences - User Interface - Shortcuts.png](/img/en/kb/kb2102.png)
-### Modify shortcuts
+
+## Modify shortcuts
 <a name="modify"></a>
 
 1. Select the shortcut you want to modify from the list. You can search for it using the ***Search*** bar at the top.
@@ -21,16 +22,18 @@ For a list of default values for shortcuts, visit our [Keyboard Shortcuts](https
 If you change your mind, you can use the ***Reset*** button to cancel all your unsaved changes.
 {% endsnippet %}  
 
-5. When done, click ***Save***  
+5. When done, click ***Save***.
+
 {% snippet icon.badgeInfo %}
 After saving, you can use the ***Restore Defaults*** button to return all shortcuts to their default values. This will undo any saved changes you have made.
-{% endsnippet %}  
+{% endsnippet %}
 
-### Ignore Key Combinations
+## Ignore Key Combinations
 <a name="ignore"></a>
 
-Key combinations can be ignored by embedded sessions to avoid conflict. Some are already ignored by default. You can do this by dragging and dropping set shortcuts from the table above to the one below.  
+Key combinations can be ignored by embedded sessions to avoid conflict. Some are already ignored by default. You can do this by dragging and dropping set shortcuts from the table above to the one below.
 
-Another way is to specify a key combination by selecting/deselecting the ***Shift*** , ***Ctrl*** , ***Alt*** , and ***Cmd*** buttons at the bottom of the window and by entering a key from your keyboard. Clicking on ***Add*** will add the key combination to the table. For example, the image below represents the Shift+Cmd+A key combination being added to the list of combinations ignored by embedded sessions.  
+Another way is to specify a key combination by selecting/deselecting the ***Shift***, ***Ctrl***, ***Alt***, and ***Cmd*** buttons at the bottom of the window and by entering a key from your keyboard. Clicking on ***Add*** will add the key combination to the table. For example, the image below represents the Shift+Cmd+A key combination being added to the list of combinations ignored by embedded sessions.  
 ![Example of Key Combination to Ignore.png](/img/en/kb/kb2095.png)  
+
 You can undo all your modifications by clicking on ***Restore Defaults*** at the bottom.

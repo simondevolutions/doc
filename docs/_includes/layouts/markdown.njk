@@ -1,57 +1,59 @@
 ---
 layout: 'layouts/base.njk'
 ---
-{%- macro nav(item, index) -%}
-  {% set navigationTree = ['/', lang, '/', tree, '/'] | join %}
+<div class="dwd-doc-container">
+  {%- macro nav(item, index) -%}
+    {% set navigationTree = ['/', lang, '/', tree, '/'] | join %}
 
-  {%- if item.filePathStem and item.filePathStem.startsWith(navigationTree) and item.filePathStem !== [navigationTree, "index"] | join -%}
-    <div class="nav-item-container">
-      {%- if item.hasData -%}
-        <a class="nav-item level-{{ index }} {{ 'active' if page.url.startsWith(item.url) }}" href="{{ item.url }}" {{ ['data-dwd-tab data-dwd-tab-group=', item.url,' data-dwd-tab-target=', item.url] | join if item.children.length > 0 }}>
-          {{- item.title -}}
-          {%- if item.children.length > 0 -%}
-            {{- icon['expandMore'] | safe -}}
-          {%- endif -%}
-        </a>
-      {%- endif -%}
-      {%- if item.children.length > 0 -%}
-        {%- if not item.hasData -%}
-          <button class="nav-item level-{{ index }} {{ 'active' if page.url.startsWith(item.url) }}" href="{{ item.url }}" data-dwd-tab data-dwd-tab-group="{{ item.url }}" data-dwd-tab-target="{{ item.url }}">
+    {%- if item.filePathStem and item.filePathStem.startsWith(navigationTree) and item.filePathStem !== [navigationTree, "index"] | join -%}
+      <div class="nav-item-container">
+        {%- if item.hasData -%}
+          <a class="nav-item level-{{ index }} {{ 'active' if page.url.startsWith(item.url) }} {{ 'current' if page.url === item.url }}" href="{{ item.url }}" {{ ['data-dwd-tab data-dwd-tab-group=', item.url,' data-dwd-tab-target=', item.url] | join if item.children.length > 0 }}>
             {{- item.title -}}
-            {{- icon['expandMore'] | safe -}}
-          </button>
+            {%- if item.children.length > 0 -%}
+              {{- icon['expandMore'] | safe -}}
+            {%- endif -%}
+          </a>
         {%- endif -%}
-        <div class="nav-item-items {{ 'active' if page.url.startsWith(item.url) }}" data-dwd-tab-group="{{ item.url }}" data-dwd-tab-target="{{ item.url }}">
-          {%- for subItem in item.children -%}
-            {{- nav(subItem, index + 1) -}}
-          {%- endfor -%}
-        </div>
+        {%- if item.children.length > 0 -%}
+          {%- if not item.hasData -%}
+            <button class="nav-item level-{{ index }} {{ 'active' if page.url.startsWith(item.url) }}" href="{{ item.url }}" data-dwd-tab data-dwd-tab-group="{{ item.url }}" data-dwd-tab-target="{{ item.url }}">
+              {{- item.title -}}
+              {{- icon['expandMore'] | safe -}}
+            </button>
+          {%- endif -%}
+          <div class="nav-item-items {{ 'active' if page.url.startsWith(item.url) }}" data-dwd-tab-group="{{ item.url }}" data-dwd-tab-target="{{ item.url }}">
+            {%- for subItem in item.children -%}
+              {{- nav(subItem, index + 1) -}}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- else -%}
+      {%- if item.children.length > 0 -%}
+        {%- for subItem in item.children -%}
+          {{- nav(subItem, 1) -}}
+        {%- endfor -%}
       {%- endif -%}
-    </div>
-  {%- else -%}
-    {%- if item.children.length > 0 -%}
-      {%- for subItem in item.children -%}
-        {{- nav(subItem, 1) -}}
-      {%- endfor -%}
     {%- endif -%}
+  {%- endmacro -%}
+
+  {%- if tree and page.url -%}
+    <nav class="navigation">
+      {%- for item in collections.eleventyNavigationTree -%}
+        {{- nav(item, loop.index) -}}
+      {%- endfor -%}
+    </nav>
   {%- endif -%}
-{%- endmacro -%}
 
-{%- if tree and page.url -%}
-  <nav class="navigation">
-    {%- for item in collections.eleventyNavigationTree -%}
-      {{- nav(item, loop.index) -}}
-    {%- endfor -%}
-  </nav>
-{%- endif -%}
+  <main class="markdown">
+    <div class="title">
+      <h1>{{- title -}}</h1>
+      <a href="{{ config.githubEdit }}{{ page.inputPath }}" target="_blank">
+        {{ icon['edit'] | safe }}
+      </a>
+    </div>
 
-<main class="markdown">
-  <div class="title">
-    <h1>{{- title -}}</h1>
-    <a href="{{ config.githubEdit }}{{ page.inputPath }}" target="_blank">
-      {{ icon['edit'] | safe }}
-    </a>
-  </div>
-
-  {{- content | safe -}}
-</main>
+    {{- content | safe -}}
+  </main>
+</div>

@@ -1,13 +1,14 @@
 ---
 title: Running RDM Synchronizer from a Centralized Server
 ---
-# {{ en.TOPICTITLE }}
-In order to prevent your computer from being overloaded by background tasks, such as Synchronizer, perform these tasks on centralized servers.  
+In order to prevent your computer from being overloaded by background tasks, such as Synchronizer, perform these tasks on centralized servers.
+
 {% snippet icon.badgeInfo %}
 These instructions are for team data sources
-{% endsnippet %}  
+{% endsnippet %}
 
-### Step-by-step guide
+## Step-by-step guide
+
 1. Install a [portable version](https://help.remotedesktopmanager.com/installation_portableusb.html) of {{ en.RDM }}
 1. Add your configured advanced data source. We recommend ***Windows authentication*** for authentication type.
 1. Delete the ***Local Data Source*** from the data source list.
@@ -25,9 +26,8 @@ These instructions are for team data sources
     1. Set the schedule for the trigger. In our example, we used Weekly, every Sunday, at 1:00:00 am.
     1. Check ***Stop task if it runs longer than*** and set value to 30 minutes.
     1. Check ***Enabled*** , then click ***OK***  
-![KB4200.png](/img/en/kb/KB4200.png)  
-
-11. On the ***Actions tab*** , click ***New***  
+      ![KB4200.png](/img/en/kb/KB4200.png)  
+1. On the ***Actions tab*** , click ***New***  
 ![KB4201.png](/img/en/kb/KB4201.png)
 1. Paste the Command line copied in step 5 into ***Program/script*** and click ***OK***  
 ![KB4202.png](/img/en/kb/KB4202.png)

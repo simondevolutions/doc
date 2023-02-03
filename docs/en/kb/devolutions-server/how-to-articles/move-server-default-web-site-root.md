@@ -1,9 +1,10 @@
 ---
 title: Move DVLS Web Site at Default Web Site Root
 ---
-# {{ en.TOPICTITLE }}
 The following guide explains how to move the {{ en.DPS }} web application on the root and set it as a web site. We recommend to first have a working {{ en.DPS }} instance according to this guide for [Creating {{ en.DPS }} Instance](https://helpserver.devolutions.net/install_createrdmsinstance.html) We highly recommend to backup your current working installation before modifying any parameters in IIS Manager.
-### Step-by-step guide
+
+## Step-by-step guide
+
 1. From the console, uninstall the Scheduler in the Companions tab.  
 ![KB4144.png](/img/en/kb/KB4144.png)
 1. Close the console.

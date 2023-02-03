@@ -1,12 +1,12 @@
 ---
 title: How to Activate the Offline Mode for an Advanced Data Source
 ---
-# {{ en.TOPICTITLE }}
-{% youtube 'W7jK8g4WbNQ' %}  
+
+{% youtube 'W7jK8g4WbNQ' %}
 
 {% snippet icon.badgeCaution %}
 You must enable to offline mode on multiple levels; the Data Source, the Users, the User groups (only for DVLS), the System Settings and each Vault.
-{% endsnippet %}  
+{% endsnippet %}
 
 1. For the ***Data Source*** , go to File - Data Sources - Advanced - Caching Mode - Intelligent We would also recommend checking the ***Auto go offline*** option.  
 ![KB4799.png](/img/en/kb/KB4799.png)

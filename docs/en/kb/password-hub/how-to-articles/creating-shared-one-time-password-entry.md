@@ -1,8 +1,9 @@
 ---
 title: Creating a Shared One-Time Password Entry
 ---
-# {{ en.TOPICTITLE }}
+
 Add a layer of security to your Devolutions Account by setting up a shared one-time password entry (OTP). To create one for your application, follow the steps below.
+
 1. In your Devolutions Workspace application, choose the application and vault of your choice, then tap the green &quot;add&quot; icon to access the ***Add New Entry*** interface.
 1. Tap the ***OTP*** icon under the ***Credentials*** section.  
 ![KB2045.png](/img/en/kb/KB2045.png)
@@ -16,12 +17,14 @@ Add a layer of security to your Devolutions Account by setting up a shared one-t
 ![KB2051.png](/img/en/kb/KB2051.png)
 1. Tap on ***View code*** to show your OTP.  
 ![KB2052.png](/img/en/kb/KB2052.png)
-1. Your OTP should appear on your screen.  
+1. Your OTP should appear on your screen.
+
 {% snippet icon.badgeInfo %}
 This password is only valid for 30 seconds. After this time, another code will appear, rendering the first one useless. You can copy the password to your clipboard by tapping the copy icon next to the remaining time.
-{% endsnippet %}  
+{% endsnippet %}
 
 ![KB2053.png](/img/en/kb/KB2053.png)
+
 9. Paste from your clipboard or write your OTP in the corresponding field.  
 ![KB2054.png](/img/en/kb/KB2054.png)  
 

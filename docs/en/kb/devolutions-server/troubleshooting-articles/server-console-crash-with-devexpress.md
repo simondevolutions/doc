@@ -1,10 +1,12 @@
 ---
 title: Devolutions Server Console Crash with DevExpress
 ---
-# {{ en.TOPICTITLE }}
 After the DVLS Console installation version 2019.2.12.0, it is not possible to launch the DVLS Console anymore.
+
 Here is the call stack the DVLS Console should trigger in the Windows Event logs
+
 Event 1000 – Application Error
+
 ```
 Faulting application name: DPS.Console.exe, version: 2019.2.12.0, time stamp: 0x5df29c50
 Faulting module name: DevExpress.Utils.v18.2.ni.dll, version: 18.2.6.0, time stamp: 0x845e3753
@@ -26,8 +28,11 @@ at DevExpress.Utils.FormShadow.FormShadowHookController.InternalPreFilterMessage
 at DevExpress.Utils.Win.Hook.HookManager.InternalPreFilterMessage(DevExpress.Utils.Win.Hook.HookInfo, Int32, System.Windows.Forms.Control, IntPtr, IntPtr, IntPtr)
 at DevExpress.Utils.Win.Hook.HookManager.WndHook(Int32, IntPtr, IntPtr)
 ```
-### Solution
+
+## Solution
+
 Follow these instructions to be able to open the DVLS Console.
+
 1. On the server where your {{ en.DPS }} instance is hosted, navigate to the following folder.
 %appdata%\Devolutions\DPSConsole
 1. Delete the DPSConsole.ext file.

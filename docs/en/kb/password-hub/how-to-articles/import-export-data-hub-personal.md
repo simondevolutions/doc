@@ -2,14 +2,16 @@
 eleventyComputed:
   title: Import/Export Data with {{ en.PHUB }} Personal
 ---
-# {{ en.TOPICTITLE }}
-You can import new data to your {{ en.PHUB }} Personal and export your existing data to the Json format. These features are accessible via the ***Tools*** tab, under the ***Import / Export*** section.  
-![Import/Export.png](/img/en/kb/kb2083.png)
-## Steps
-Go to the section that corresponds to your needs:  
+You can import new data to your {{ en.PHUB }} Personal and export your existing data to the Json format. These features are accessible via the ***Tools*** tab, under the ***Import / Export*** section.
 
-* <a href="#import">Import data to {{ en.PHUB }} Personal</a>
-* <a href="#export">Export data from {{ en.PHUB }} Personal</a>
+![Import/Export.png](/img/en/kb/kb2083.png)
+
+## Steps
+
+Go to the section that corresponds to your needs:
+
+- [Import data to {{ en.PHUB }} Personal](#import)
+- [Export data from {{ en.PHUB }} Personal](#export)
 
 ### Import Data
 <a name="import"></a>
@@ -29,6 +31,7 @@ The ***Change ID*** box at the bottom left of the window is checked by default, 
 
 6. Click ***Import***
 Your data has been imported to the destination folder you previously specified.
+
 ### Export Data
 <a name="export"></a>
 

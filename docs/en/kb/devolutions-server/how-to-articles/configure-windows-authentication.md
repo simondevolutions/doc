@@ -1,13 +1,14 @@
 ---
 title: Configure Windows Authentication
 ---
-# {{ en.TOPICTITLE }} 
-{% snippet icon.badgeCaution %} 
-The machine hosting {{ en.DPS }} must be joined to the configured domain for Windows Authentication to work. 
+{% snippet icon.badgeCaution %}
+The machine hosting {{ en.DPS }} must be joined to the configured domain for Windows Authentication to work.
 {% endsnippet %}
- 
+
 These steps provide the information to enable the ***Windows Authentication*** feature in {{ en.DPS }} . 
-## Steps 
+
+## Steps
+
 1. In ***Administration – Server Settings – Authentication*** of the {{ en.DPS }} instance web interface, check the ***Enable Windows authentication*** option box. When done, click on the ***Save*** button.  
 ![KB4377.png](/img/en/kb/KB4377.png) 
 1. Set the administrator credential properties in the Administration – Server Settings – Authentication – Domains . 
@@ -20,15 +21,14 @@ When done, you can close the ***Add Roles and Features Wizard*** and &#32; ***Se
  
 ![KB4378.png](/img/en/kb/KB4378.png) 
 
-5. Open the ***IIS Manager*** . Select the server in the t ree view and open the ***Feature Delegation*** in the ***Management*** section.  
+5. Open the ***IIS Manager***. Select the server in the tree view and open the ***Feature Delegation*** in the ***Management*** section.  
 ![KB4379.png](/img/en/kb/KB4379.png) 
 1. Set the ***Authentication - Windows*** feature to the ***Read/Write*** value. 
 {% snippet icon.badgeInfo %} 
-When done, you can close the ***IIS Manager*** . 
+When done, you can close the ***IIS Manager***. 
 {% endsnippet %}
  
 ![KB2129.png](/img/en/kb/KB2129.png) 
 
-7. Finally, in the data source configuration of each client in {{ en.RDM }} , enable the ***Use Windows authentication*** option, then click ***OK*** when done to save your modifications. 
-![KB4381.png](/img/en/kb/KB4381.png) 
-
+7. Finally, in the data source configuration of each client in {{ en.RDM }}, enable the ***Use Windows authentication*** option, then click ***OK*** when done to save your modifications. 
+![KB4381.png](/img/en/kb/KB4381.png)

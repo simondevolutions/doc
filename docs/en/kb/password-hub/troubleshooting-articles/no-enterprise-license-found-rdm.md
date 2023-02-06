@@ -1,17 +1,19 @@
 ---
 title: No Enterprise License Found in RDM with HUB
 ---
-# {{ en.TOPICTITLE }}
-With a valid {{ en.RDM }} license, you get prompt with the error message ***No Enterprise License Found*** in version 2022.3.X linked with a {{ en.PHUBB }} data source.  
+With a valid {{ en.RDM }} license, you get prompt with the error message ***No Enterprise License Found*** in version 2022.3.X linked with a {{ en.PHUBB }} data source.
+
 {% snippet icon.badgeInfo %}
 To learn more about this major improvement, read our latest Devolutions blog [{{ en.RDM }} Free and Enterprise are now unified](https://blog.devolutions.net/2022/10/news-remote-desktop-manager-is-changing-for-the-better/)
-{% endsnippet %}  
+{% endsnippet %}
 
 ## Solution
-Save the {{ en.RDM }} product license in {{ en.PHUB }} and assign it to users.  
+
+Save the {{ en.RDM }} product license in {{ en.PHUB }} and assign it to users.
+
 {% snippet icon.badgeCaution %}
 Only ***Administrators*** and users with permissions in the ***System Permissions*** section will have access to register a license in {{ en.PHUBB }}
-{% endsnippet %}  
+{% endsnippet %}
 
 1. In {{ en.RDM }} click ***Administration - License*** to be redirected to the {{ en.PHUB }} web interface.
 1. Click the ***Add*** button.  

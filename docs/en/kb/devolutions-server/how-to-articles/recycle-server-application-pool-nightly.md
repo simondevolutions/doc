@@ -1,8 +1,8 @@
 ---
 title: Recycle DVLS Application Pool Nightly
 ---
-# {{ en.TOPICTITLE }}
 The default value set in ***Regular Time Interval*** parameters of the advanced settings of an IIS application pool is used to recycle the application pool every 29 hours. Sometimes, we need to recycle the application pool nightly to prevent getting a non-responsive web application.
+
 1. Open IIS Manager.
 2. Expand the tree and select the ***Application Pools*** node.  
 ![KB4135.png](/img/en/kb/KB4135.png)

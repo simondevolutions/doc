@@ -1,10 +1,9 @@
 ---
 title: RDM Typing Macro to Perform Authentication
 ---
-# {{ en.TOPICTITLE }}
-With {{ en.RDM }} , it is possible to send credentials through a typing macro using variables.  
+With {{ en.RDM }} , it is possible to send credentials through a typing macro using variables.
 
-1. Open the ***Properties*** of a ***Website*** session entry. In the left menu, make sure you are in ***Common – General***
+1. Open the ***Properties*** of a ***Website*** session entry. In the left menu, make sure you are in ***Common – General***.
 1. Click the ***Login*** tab to access the ***Settings*** section.
 1. Check the ***Autofill login*** box and uncheck the ***Auto submit*** box.  
 ![KB4835.png](/img/en/kb/KB4835.png)
@@ -18,7 +17,7 @@ Also, if you are using the ***Linked (Vault)*** credential mode in your entry, y
 
 ![KB4836.png](/img/en/kb/KB4836.png)  
 
-6. In the left menu, navigate to ***Connection – Events***
+6. In the left menu, navigate to ***Connection – Events***.
 1. Click on the ***After Open*** tab. In the ***Typing macro*** section, paste the following: $USERNAME${TAB}$PASSWORD${ENTER}.  
 ![KB4837.png](/img/en/kb/KB4837.png)
 1. Click ***OK*** to save.

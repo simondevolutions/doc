@@ -1,9 +1,7 @@
 ---
 title: View Multi-row for Open Session Tabs
 ---
-# {{ en.TOPICTITLE }}
-
-{% youtube 'aoFVQ6X53nI' %}  
+{% youtube 'aoFVQ6X53nI' %}
 
 By default, open session tabs in {{ en.RDM }} can be viewed and scrolled on a single line with arrows. To view the whole list you must press the down arrow.  
 

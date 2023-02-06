@@ -14,171 +14,40 @@ To create an SSH tunnel a given port of one machine needs to be forwarded to a p
 ![KB4521.png](/img/en/kb/KB4521.png)  
 Set up the properties as follows:
 ### SSH Server Settings
-<table>
-	<tr>
-		<th>
-OPTION
-		</th>
-		<th>
-DESCRIPTION
-		</th>
-	</tr>
-	<tr>
-		<td>
-Host
-		</td>
-		<td>
-Set the IP address of the SSH Server. (please refer to <b>1</b> in the Tunnel diagram)
-		</td>
-	</tr>
-	<tr>
-		<td>
-Port
-		</td>
-		<td>
-Set the port of the SSH Server. The default port is 22. (please refer to in the Tunnel diagram)
-		</td>
-	</tr>
-	<tr>
-		<td>
-Set public key
-		</td>
-		<td>
-Setup the public key
-		</td>
-	</tr>
-	<tr>
-		<td>
-Username
-		</td>
-		<td>
-Enter the SSH server username to connect.
-		</td>
-	</tr>
-	<tr>
-		<td>
-Password
-		</td>
-		<td>
-Enter the SSH server password to connect.
-		</td>
-	</tr>
-</table>
+
+| Option         | Description |
+| -------------- | ----------- |
+| Host           | Set the IP address of the SSH Server. (please refer to <b>1</b> in the Tunnel diagram)          |
+| Port           | Set the port of the SSH Server. The default port is 22. (please refer to in the Tunnel diagram) |
+| Set public key | Setup the public key                      |
+| Username       | Enter the SSH server username to connect. |
+| Password       | Enter the SSH server password to connect. |
 
 ### Outgoing Tunnel Settings
-<table>
-	<tr>
-		<th>
-OPTION
-		</th>
-		<th>
-DESCRIPTION
-		</th>
-	</tr>
-	<tr>
-		<td>
-Mode
-		</td>
-		<td>
-Select between: Local , Remote or Dynamic
-		</td>
-	</tr>
-	<tr>
-		<td>
-Local address
-		</td>
-		<td>
-The local address must be left to 127.0.0.1. (please refer to 1 in the Tunnel diagram)
-		</td>
-	</tr>
-	<tr>
-		<td>
-Local port
-		</td>
-		<td>
-In most cases leave the local port to its default value 3390. (please refer to ‚ in the Tunnel diagram)
-		</td>
-	</tr>
-	<tr>
-		<td>
-Remote host
-		</td>
-		<td>
-Enter the host or IP address of your remote client. (please refer to … in the Tunnel diagram)
-		</td>
-	</tr>
-	<tr>
-		<td>
-Remote port
-		</td>
-		<td>
-Set the final port that you must reach, in most cases leave it to its default value 3389. (please refer to † in the Tunnel diagram)
-		</td>
-	</tr>
-</table>
+
+| Option        | Description |
+| ------------- | ----------- |
+| Mode          | Select between: Local , Remote or Dynamic |
+| Local address | The local address must be left to 127.0.0.1. (please refer to 1 in the Tunnel diagram) |
+| Local port    | In most cases leave the local port to its default value 3390. (please refer to ‚ in the Tunnel diagram) |
+| Remote host   | Enter the host or IP address of your remote client. (please refer to … in the Tunnel diagram) |
+| Remote port   | Set the final port that you must reach, in most cases leave it to its default value 3389. (please refer to † in the Tunnel diagram) |
 
 At this time, you can launch your entry to see if indeed the tunnel has been opened successfully. Close the session.
+
 ## Create your remote session
+
 Create an RDP session.  
 ![KB4522.png](/img/en/kb/KB4522.png)
-<table>
-	<tr>
-		<th>
-OPTION
-		</th>
-		<th>
-DESCRIPTION
-		</th>
-	</tr>
-	<tr>
-		<td>
-Host
-		</td>
-		<td>
-Enter your Local address which is 127.0.0.1. (please refer to 1 in the Tunnel diagram)
-		</td>
-	</tr>
-	<tr>
-		<td>
-Port
-		</td>
-		<td>
-Enter your Local port which is 3390. (please refer to ‚ in the Tunnel diagram)
-		</td>
-	</tr>
-	<tr>
-		<td>
-RDP type
-		</td>
-		<td>
-Leave the RDP type to Normal.
-		</td>
-	</tr>
-	<tr>
-		<td>
-Username
-		</td>
-		<td>
-Enter the username of your Remote Host.
-		</td>
-	</tr>
-	<tr>
-		<td>
-Domain
-		</td>
-		<td>
-Enter the domain of your Remote Host.
-		</td>
-	</tr>
-	<tr>
-		<td>
-Password
-		</td>
-		<td>
-Enter the password of your Remote Host.
-		</td>
-	</tr>
-</table>
+
+| Option   | Description |
+| -------- | ----------- |
+| Host     | Enter your Local address which is 127.0.0.1. (please refer to 1 in the Tunnel diagram) |
+| Port     | Enter your Local port which is 3390. (please refer to ‚ in the Tunnel diagram)         |
+| RDP type | Leave the RDP type to Normal.           |
+| Username | Enter the username of your Remote Host. |
+| Domain   | Enter the domain of your Remote Host.   |
+| Password | Enter the password of your Remote Host. |
 
 In the ***VPN/SSH/Gateway*** side menu of your RDP session select ***Always connect*** in the ***Open*** field and ***Session*** in the ***Type*** field.  
 ![KB4523.png](/img/en/kb/KB4523.png)  

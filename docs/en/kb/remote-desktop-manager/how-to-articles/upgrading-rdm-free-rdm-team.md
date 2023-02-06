@@ -1,21 +1,23 @@
 ---
 title: Upgrading from RDM Free to RDM Team
 ---
-# {{ en.TOPICTITLE }}  
 {% snippet icon.badgeInfo %}
 Since version 2022.3 of {{ en.RDM }} , the Free Edition and Team Edition (previously Enterprise Edition) have been merged into [one single download](https://devolutions.net/remote-desktop-manager) , allowing users to upgrade with more ease. To learn more about this change, you can read our blog post [Remote Desktop Manager Free and Enterprise Are Now Unified](https://blog.devolutions.net/2022/10/news-remote-desktop-manager-is-changing-for-the-better/)  
 
 If you are using {{ en.RDM }} version 2022.3 or later, read our topic on [how to register a Team license](https://help.remotedesktopmanager.com/installation_registration_enterpriseedition.html) Otherwise, continue in this topic.
-{% endsnippet %}  
+{% endsnippet %}
+
 {% snippet icon.badgeInfo %}
 File based data sources (XML, SQLite, etc.) are by default stored in the configuration folder. As a precaution, go through each data source in ***File – Data sources*** and have a look at the local path (if any). Any file that is in the configuration folder must be copied manually.
-{% endsnippet %}  
+{% endsnippet %}
+
 {% snippet icon.badgeInfo %}
 The paths mentioned in this topic are for those that have installed using the default settings. The best way to locate your configuration folder is to go to ***File – Options – Advanced*** You will find a hyperlink near the bottom under the ***Information*** section that opens your configuration folder.
-{% endsnippet %}  
+{% endsnippet %}
+
 {% snippet icon.badgeCaution %}
 Please ensure you close the application before going further.
-{% endsnippet %}  
+{% endsnippet %}
 
 1. Download {{ en.RDM }} Team Edition from our [website](https://devolutions.net/remote-desktop-manager/home/download)
 1. Install {{ en.RDM }} Team Edition.

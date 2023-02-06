@@ -1,14 +1,16 @@
 ---
 title: BeyondTrust Configuration
 ---
-# {{ en.TOPICTITLE }}
 Here is the information required to configure the properties of a BeyondTrust entry.
-### Settings
+
+## Settings
+
 In the ***General*** section of the BeyondTrust entry.
+
 1. The ***Host*** is the URL of your BeyondTrust portal.
 1. The ***Username*** and ***Password*** will be an account that has the permissions to connect to BeyondTrust.  
 ![KB4944.png](/img/en/kb/KB4944.png)
-1. The ***Application API key*** is the key of one of your BeyondTrust ***API Registrations***  
+1. The ***Application API key*** is the key of one of your BeyondTrust ***API Registrations***.  
 ![KB4946.png](/img/en/kb/KB4946.png)  
 In the ***Advanced*** section of the same BeyondTrust entry.  
 

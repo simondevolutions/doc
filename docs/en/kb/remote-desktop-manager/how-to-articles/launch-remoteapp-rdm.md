@@ -1,8 +1,8 @@
 ---
 title: Launch RemoteApp with RDM
 ---
-# {{ en.TOPICTITLE }}
 Here are the steps and information required to launch ***RemoteApp*** with {{ en.RDM }} in ***External*** mode.
+
 1. When you download an RDP file from a ***RemoteApp RD Web server*** , you will notice that it will populate the file with the ***RD Connection Broker’s*** server address.  
 {% snippet icon.badgeInfo %}
 In this example the ***RD Connection Broker*** role and the ***RD Web Access*** role are installed on the same server.

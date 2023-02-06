@@ -1,10 +1,11 @@
 ---
 title: Host with Templates
 ---
-# {{ en.TOPICTITLE }}
 A Host entry will let you use templates in order to connect to the host. It will prompt you to choose which template to use to launch the host.
-### SETTINGS
-{% youtube 'dOuwGyYI61U' %}  
+
+## SETTINGS
+
+{% youtube 'dOuwGyYI61U' %}
 
 1. Create one or multiple [Templates](https://help.remotedesktopmanager.com/file_templates.html) via the ***File – Templates – Templates*** menu. You may need to use Variables like $HOST$ for the host name as well as $USERNAME$ or $PASSWORD$ for the username and password.
 1. Create a host entry and click on the ***Action*** tab.  

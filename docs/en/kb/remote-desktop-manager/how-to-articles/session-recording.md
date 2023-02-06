@@ -4,38 +4,42 @@ description: Session recording provides a record of what a user did while a remo
 keywords:
 - Session Recording
 ---
-# {{ en.TOPICTITLE }} 
-Session recording provides a record of what a user did while a remote connection was opened in {{ en.RDM }}. It records one frame per second and creates a video in webm format. 
-{% snippet icon.badgeInfo %} 
-Session recording is available in {{ en.RDM }} 2019.1.3.0 and above. 
+Session recording provides a record of what a user did while a remote connection was opened in {{ en.RDM }}. It records one frame per second and creates a video in webm format.
+
+{% snippet icon.badgeInfo %}
+Session recording is available in {{ en.RDM }} 2019.1.3.0 and above.
 {% endsnippet %}
  
 You can configure session recording at the vault, folder or entry level and they can be optional or required. 
-{% snippet icon.badgeCaution %} 
-Session recording is only available in embedded mode. 
+
+{% snippet icon.badgeCaution %}
+Session recording is only available in embedded mode.
 {% endsnippet %}
  
-## Supported Sessions 
-* Apple Remote Desktop 
-* Azure Blob Storage 
-* Chrome 
-* FTP 
-* Google Drive 
-* RDP 
-* S3 
-* SCP 
-* SFTP 
-* SSH Shell 
-* Telnet 
-* VNC 
-* WebDav 
+## Supported Sessions
+
+- Apple Remote Desktop
+- Azure Blob Storage
+- Chrome
+- FTP
+- Google Drive
+- RDP
+- S3
+- SCP
+- SFTP
+- SSH Shell
+- Telnet
+- VNC
+- WebDav
+
 ## Configure Session Recording 
-1. Open ***Vault Settings*** or ***Properties*** at folder or entry level. 
-1. In the ***Security*** section, click ***Session Recording***. 
-1. Choose a ***Mode***. 
-* ***Inherited***: Setting is inherited from parent folder. 
-* ***Optional***: User is prompted to record when they open the session. If they decline, the session still opens. 
-* ***Required***: Recording starts automatically. If there is an issue with recording the session does not open. 
+
+1. Open ***Vault Settings*** or ***Properties*** at folder or entry level.
+1. In the ***Security*** section, click ***Session Recording***.
+1. Choose a ***Mode***.
+* ***Inherited***: Setting is inherited from parent folder.
+* ***Optional***: User is prompted to record when they open the session. If they decline, the session still opens.
+* ***Required***: Recording starts automatically. If there is an issue with recording the session does not open.
 * ***Required (When Available)***: Recording starts automatically. If there is an issue with the recording, the session will launch and no recording will be available. 
 * ***Never***: Session recording is turned off. 
 * ***Root (Default)***: Refers to vault. Default on vault means ***Never***. 

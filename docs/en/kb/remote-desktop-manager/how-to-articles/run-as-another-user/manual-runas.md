@@ -1,21 +1,30 @@
 ---
 title: Manual RunAs
 ---
-# {{ en.TOPICTITLE }}  
 {% snippet icon.badgeInfo %}
 This article describes the manual method of using RunAs. Some types support built-in RunAs details are available [here](/kb/remote-desktop-manager/how-to-articles/run-as-another-user/)
-{% endsnippet %}  
+{% endsnippet %}
 
 ## Settings
+
 ### Scenarios
+
 There are two major scenarios when using RunAs: the authentication server is accessible directly from you machine or you need delayed authentication.
+
 * ### Authentication server is locally accessible
+
 This scenario is for when you are already authenticated on a domain/workgroup and you need to switch to another account of the same domain/workgroup.
+
 * ### Delayed Authentication
+
 This scenario is for when it is impossible to log on your machine using the other set of credentials. For example you need to connect to a client&apos;s domain using your laptop that is on your company&apos;s domain. This will require using the /NETONLY parameter of RunAs.
+
 ### Examples
+
 The RunAs command is invoked from an entry of the ***Command line*** type. Create the entry either by pressing the Insert key or by using the menus. Select the ***Command line*** type and enter a name for it.
+
 ### Example 1: Running a command prompt as another user of the same workgroup/domain
+
 1. You can use the ellipsis button to browse for the runas.exe command, but if you are in a shared data source and the session is used on various operating systems, it&apos;s better to type in &quot;%systemroot%\system32\runas.exe&quot; because it will work on all of them.
 1. Append /user:$DOMAIN$\$USERNAME$ , keeping it outside of the quotes. Note the use of two variables that will pull the appropriate value from other fields of the same session. For more information please consult the Variables topic.
 1. Append the name of the executable you want to run. Enclose it in quotes if the full path contains spaces. In our case we can simply add ***CMD***  
@@ -30,19 +39,22 @@ The RunAs command is invoked from an entry of the ***Command line*** type. Creat
 ![KB4576.png](/img/en/kb/KB4576.png)
 When you run your session, a command prompt window appears requesting the password for the user. The Typing Macro will fill it in after the 1 second delay. After this, the command window that is running under the different credentials appears. Note that the title indicates the other identity.  
 ![KB4577.png](/img/en/kb/KB4577.png)
+
 ### Example 2: Running SQL Server Management Studio as a user of a different domain/workgroup for using Windows Authentication
+
 There are minor differences with Example 1, but here is the full procedure to make it easy to read  
+
 {% snippet icon.badgeInfo %}
 Note that most of our entries now support NetOnly as a built in feature.
 {% endsnippet %}  
 
-1. You can use the ellipsis button to browse for the runas.exe command, but if you are in a shared data source and the session will be used on various operating systems, it&apos;s better to type in &quot;%systemroot%\system32\runas.exe&quot; because it will work on all of them.
+1. You can use the ellipsis button to browse for the runas.exe command, but if you are in a shared data source and the session will be used on various operating systems, it's better to type in "%systemroot%\system32\runas.exe" because it will work on all of them.
 1. Append /netonly /user:$DOMAIN$\$USERNAME$ , keeping it outside of the quotes. Note the use of two variables that will pull the appropriate value from other fields of the same session. For more information please consult the Variables topic. Also note the use of the NetOnly parameter, it signals that the credentials will be used for network access only.
 1. Append the name of the Management Studio executable and its parameters. All this needs to be within the same double quotes
-    * SQL Server Management studio is located at &quot;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\Ssms.exe&quot; on most machines, adapt to your situation if it&apos;s not the same.
+    * SQL Server Management studio is located at "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\Ssms.exe" on most machines, adapt to your situation if it's not the same.
     * My parameters look like this: -S sql.windjammer.loc -E -S is for the server name, -E is to use windows authentication, you can even specify the database using -d __DB_NAME__ (i.e. -d rdm)  
 
-The result is: &quot;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\Ssms.exe -S sql.windjammer.loc -E&quot;  
+The result is: "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\Ssms.exe -S sql.windjammer.loc -E"
 
 4. Uncheck ***Use Shell Execute*** (this must be done for most Windows Applications)  
 ![KB4578.png](/img/en/kb/KB4578.png)

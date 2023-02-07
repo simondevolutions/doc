@@ -192,10 +192,16 @@
     }
   }
 
+  code {
+    background: #424242;
+    border-radius: 4px;
+    color: #eeeeee;
+    padding: 4px 8px;
+  }
+
   pre {
     code {
       &.hljs {
-        border-radius: 4px;
         padding: 16px;
       }
     }

@@ -28,7 +28,7 @@ The following command will create a new {{ en.DPS }} instance from a JSON respon
 
 Sample of a JSON response file for creating a new {{ en.DPS }} instance.
 
-```
+```json
 {
   "acceptEula": true,
   "adminEmail": "admin@mydomain.org",

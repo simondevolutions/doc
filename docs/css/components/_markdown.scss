@@ -191,5 +191,20 @@
       }
     }
   }
+
+  code {
+    background: #424242;
+    border-radius: 4px;
+    color: #eeeeee;
+    padding: 4px 8px;
+  }
+
+  pre {
+    code {
+      &.hljs {
+        padding: 16px;
+      }
+    }
+  }
 }
 

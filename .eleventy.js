@@ -2,10 +2,22 @@ const eleventyFilter = require('./utils/eleventy-filter');
 const eleventyNavigationTree = require('./utils/eleventy-navigation-tree');
 const eleventySass = require('./utils/eleventy-sass');
 const eleventyShortcodes = require('./utils/eleventy-shortcodes');
+const hljs = require('highlight.js');
 const markdownIt = require('markdown-it')({
   html: true,
   breaks: false,
-  linkify: true
+  linkify: true,
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return '<pre><code class="hljs">' +
+               hljs.highlight(str, { language: lang, ignoreIllegals: true }).value +
+               '</code></pre>';
+      } catch (__) {}
+    }
+
+    return '<pre><code class="hljs">' + markdownIt.utils.escapeHtml(str) + '</code></pre>';
+  }
 });
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownItAttrs = require('markdown-it-attrs');

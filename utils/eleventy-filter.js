@@ -1,3 +1,5 @@
+const { toc } = require('../docs/_filters/toc');
+
 module.exports = (config) => {
   config.addFilter('localized', function (value) {
     value = value.startsWith('/en/') ? value.replace('/en/', '/') : value;
@@ -5,4 +7,6 @@ module.exports = (config) => {
 
     return value;
   });
+
+  config.addFilter('toc', toc);
 }

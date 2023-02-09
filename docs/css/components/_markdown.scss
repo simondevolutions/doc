@@ -1,22 +1,23 @@
-.markdown {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1328px;
-  padding: 0 calc(280px + 24px);
+.markdown-container {
+  padding: 0 16px;
 
-  * {
-    margin-bottom: 0;
-
-    + * {
-      margin-top: 16px;
-    }
+  @media (min-width: 1200px) {
+    column-gap: 24px;
+    display: grid;
+    grid-template-areas:
+      ". title toc"
+      ". md    toc";
+    grid-auto-columns: minmax(280px, 280px) minmax(0px, auto) minmax(280px, 280px);
+    padding: 0;
   }
 
   .title {
     align-items: center;
     display: flex;
     flex: 1;
-    margin: 0 0 30px;
+    grid-area: title;
+    margin: 0 auto 30px;
+    max-width: 720px;
     padding: 8px 0;
     width: 100%;
 
@@ -41,6 +42,23 @@
         height: 18px;
         width: 18px;
       }
+    }
+  }
+}
+
+.markdown {
+  grid-area: md;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  width: 100%;
+  // padding: 0 calc(280px + 24px);
+
+  * {
+    margin-bottom: 0;
+
+    + * {
+      margin-top: 16px;
     }
   }
 

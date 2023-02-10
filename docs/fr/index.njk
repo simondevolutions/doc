@@ -3,17 +3,11 @@
   <p>Need help? Here is the complete coverage for all Devolutions Products, Add-ons and Companion Tools.</p>
 
   <nav class="grid-list">
-    <a href="/fr/cloud/">
-      <img src="https://webdevolutions.blob.core.windows.net/images/projects/cloud/logos/cloud-icon-shadow.svg"/>
-      <b>Devolutions</b> Cloud
-    </a>
-    <a href="/fr/kb/">
-      <img src="https://webdevolutions.blob.core.windows.net/images/projects/knowledge-base/logos/knowledge-base-icon-shadow.svg"/>
-      <b>Devolutions</b> Knowledge Base
-    </a>
-    <a href="/fr/server/">
-      <img src="https://webdevolutions.blob.core.windows.net/images/projects/server/logos/server-icon-shadow.svg"/>
-      <b>Devolutions</b> Server
-    </a>
+    {% for product, item in project %}
+      <a href="/fr{{ item.url }}">
+        <img src="{{ item.icon }}">
+        {{ item.formattedName | safe }}
+      </a>
+    {% endfor %}
   </nav>
 </div>

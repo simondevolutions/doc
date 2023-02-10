@@ -8,6 +8,10 @@ module.exports = (config) => {
         const pathTree = `/${item.data.lang}/${t}/`;
         let url = item.url;
 
+        if (!item.url) {
+          return;
+        }
+
         if (!item.filePathStem.startsWith(pathTree)) {
           item.filePathStem = item.filePathStem.replace(`/${item.data.lang}/`, pathTree);
           url = item.data.lang === 'en' ? `/${t}${item.url}` : item.url.replace(`/${item.data.lang}/`, pathTree);

@@ -8,7 +8,7 @@
   padding-bottom: 8px;
   padding-top: 8px;
   position: fixed;
-  top: var(--header-height);
+  top: calc(var(--header-height) + 24px);
   width: 280px;
   z-index: 10;
 

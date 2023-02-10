@@ -1,0 +1,13 @@
+{% set subHeader = project[tree] %}
+
+{% if subHeader %}
+  <div class="dwd-sub-header-container">
+    <div class="dwd-sub-header">
+      <div class="dwd-sub-header-wrapper">
+        {% if subHeader.logo %}
+          <img class="logo" src="{{ subHeader.logo }}">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}

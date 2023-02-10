@@ -1,0 +1,31 @@
+.dwd-sub-header-container {
+  background-color: #f9f9f9;
+  display: flex;
+  height: var(--header-height);
+}
+
+.dwd-sub-header {
+  align-items: center;
+  background-color: #f9f9f9;
+  display: flex;
+  height: var(--header-height);
+  padding: 0 20px;
+  position: fixed;
+  top: var(--header-height);
+  width: 100%;
+  z-index: 1001;
+
+  .dwd-sub-header-wrapper {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
+    width: 100%;
+  }
+
+  .logo {
+    height: 48px;
+  }
+}

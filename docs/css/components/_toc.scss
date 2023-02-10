@@ -1,0 +1,49 @@
+.dwd-toc-container {
+  grid-area: toc;
+  margin: 0 auto 24px;
+  max-height: calc(100% - var(--header-height) - 48px);
+  max-width: 720px;
+  width: 100%;
+
+  @media (min-width: 1200px) {
+    width: 280px;
+  }
+
+  > span {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+
+.dwd-toc {
+  border-left: 2px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px;
+  position: sticky;
+  top: calc(var(--header-height) + 32px);
+
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+  
+    a {
+      color: inherit;
+    }
+  
+    li {
+      font-size: 13px;
+      margin-top: 16px;
+  
+      + li {
+        margin-top: 16px;
+      }
+    }
+  
+    ul {
+      padding-left: 12px;
+    }
+  }
+}

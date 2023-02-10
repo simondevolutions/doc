@@ -46,7 +46,7 @@ layout: 'layouts/base.njk'
     </nav>
   {%- endif -%}
 
-  <main class="markdown">
+  <div class="markdown-container">
     <div class="title">
       <h1>{{- title -}}</h1>
       <a href="{{ config.githubEdit }}{{ page.inputPath }}" target="_blank">
@@ -54,6 +54,10 @@ layout: 'layouts/base.njk'
       </a>
     </div>
 
-    {{- content | safe -}}
-  </main>
+    {{- content | toc('Index') | safe -}}
+
+    <main class="markdown">
+      {{- content | safe -}}
+    </main>
+  </div>
 </div>

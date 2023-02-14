@@ -6,7 +6,8 @@ module.exports = (config) => {
       item.data.trees.forEach(t => {
         let currentLevel = tree;
         const pathTree = `/${item.data.lang}/${t}/`;
-        let url = item.url;
+        let url = item.url.replace(`/${item.data.tree}/`, `/${t}/`);
+        item.filePathStem = item.filePathStem.replace(`/${item.data.tree}/`, `/${t}/`);
 
         if (!item.url) {
           return;

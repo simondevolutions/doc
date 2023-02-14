@@ -15,6 +15,7 @@ The following steps describe how to create a test instance hosted on the same ma
 1. In the database step, enter the information related to the database copy created in step 2.
 1. Provide, once prompted for it, the encryption key file exported in step 3.  
 ![Encryption keys for existing database.png](/img/en/kb/kb8113.png)
-1. When the creation is complete, make a full backup of the staging database.  
+1. When the creation is complete, make a full backup of the staging database.
+1. Finally, install all the additional features to test them like the Scheduler service, the Recording Server and the Devolutions Gateway.  
 
 From this point on, you can perform the {{ en.DVLSCONSOLE }} upgrade and [update the test instance](https://helpserver.devolutions.net/upgrade_rdms.html) The console is designed to support older versions of {{ en.DPS }}.

@@ -129,6 +129,10 @@
       }
     }
 
+    &:focus-visible {
+      outline: none;
+    }
+
     .header-anchor {
       color: #494949;
       opacity: 0;

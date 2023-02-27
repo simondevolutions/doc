@@ -7,6 +7,11 @@
         {% if subHeader.logo %}
           <img class="logo" src="{{ subHeader.logo }}">
         {% endif %}
+        <div class="dwd-sub-header-center">
+          <div id="algolia-autocomplete"
+               data-index="docs-{{ lang }}"
+               data-placeholder=""></div>
+        </div>
       </div>
     </div>
   </div>

@@ -179,12 +179,13 @@
   }
 }
 
-.aa-DetachedSearchButtonIcon {
-  color: var(--background-text);
-  margin-left: auto;
-  order: 1;
+.aa-DetachedSearchButton {
+  &:hover {
+    --aa-muted-color-rgb: var(--background-text);
+    border-color: var(--primary);
+  }
 }
 
-.aa-DetachedSearchButtonPlaceholder {
-  padding-left: 8px;
+.aa-DetachedSearchButtonIcon {
+  color: var(--background-text);
 }

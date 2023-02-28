@@ -1,13 +1,24 @@
-<div class="web-site-width">
-  <h1>Devolutions Product Documentation</h1>
-  <p>Need help? Here is the complete coverage for all Devolutions Products, Add-ons and Companion Tools.</p>
+<div class="dwd-header-media">
+  <div class="dwd-header-media-content">
+    <div class="web-site-width">
+      <div id="algolia-autocomplete" data-index="docs-{{ lang }}" data-placeholder="Que cherchez-vous?"></div>
+    </div>
+  </div>
+  <div class="dwd-photo-parallax bg-support"></div>
+</div>
 
-  <nav class="grid-list">
-    {% for product, item in project %}
-      <a href="/fr{{ item.url }}">
-        <img src="{{ item.icon }}">
-        {{ item.formattedName | safe }}
-      </a>
-    {% endfor %}
-  </nav>
+<div class="dwd-section">
+  <div class="web-site-width">
+    <h1>Devolutions Product Documentation</h1>
+    <p>Need help? Here is the complete coverage for all Devolutions Products, Add-ons and Companion Tools.</p>
+
+    <nav class="grid-list">
+      {% for product, item in project %}
+        <a href="/fr{{ item.url }}">
+          <img src="{{ item.icon }}">
+          <span>{{ item.formattedName | safe }}</span>
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
 </div>

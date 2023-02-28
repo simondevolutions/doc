@@ -1,0 +1,10 @@
+.dwd-section {
+  padding: 72px 0;
+  text-align: center;
+
+  h1 {
+    + * {
+      margin-top: 16px;
+    }
+  }
+}

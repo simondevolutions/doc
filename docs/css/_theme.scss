@@ -14,6 +14,8 @@ body {
   --aa-detached-modal-max-height: 100%;
   --aa-icon-size: 24px;
   --aa-search-input-height: 38px;
+  --aa-muted-color-rgb: 128, 128, 128;
+  --aa-muted-color-alpha: 1;
 
   @media (min-width: 1200px) {
     --aa-detached-modal-max-width: 1040px;

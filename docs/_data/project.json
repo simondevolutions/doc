@@ -2,7 +2,13 @@
   "kb": {
     "icon": "https://webdevolutions.blob.core.windows.net/images/projects/knowledge-base/logos/knowledge-base-icon-shadow.svg",
     "logo": "https://webdevolutions.blob.core.windows.net/images/projects/knowledge-base/logos/knowledge-base-color-shadow.svg",
-    "url": "/kb/",
+    "url": "/kb/devolutions-customer-success/",
     "formattedName": "<b>Devolutions</b> Knowledge Base"
+  },
+  "cloud": {
+    "icon": "https://webdevolutions.blob.core.windows.net/images/projects/cloud/logos/cloud-icon-shadow.svg",
+    "logo": "https://webdevolutions.blob.core.windows.net/images/projects/cloud/logos/cloud-color-shadow.svg",
+    "url": "/cloud/getting-started/devolutions-cloud-services/",
+    "formattedName": "<b>Devolutions</b> Cloud"
   }
 }

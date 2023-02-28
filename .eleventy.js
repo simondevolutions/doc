@@ -5,6 +5,9 @@ const eleventyShortcodes = require('./utils/eleventy-shortcodes');
 const hljs = require('highlight.js');
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownItAttrs = require('markdown-it-attrs');
+const algolia = require('./utils/algolia');
+
+require('dotenv').config();
 
 module.exports = function (config) {
   config.addPlugin(eleventySass);
@@ -50,6 +53,10 @@ module.exports = function (config) {
     }
 
     return mdLib;
+  });
+
+  config.on('eleventy.after', async ({ results }) => {
+    algolia(results);
   });
 
   return {

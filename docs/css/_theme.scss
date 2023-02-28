@@ -1,8 +1,24 @@
 :root,
 body {
   --primary: #0068c3;
+  --primary-rgb: 0, 104, 195;
   --primary-text: #ffffff;
+  --background-text: #494949;
   --header-height: 72px;
+
+  --aa-primary-color: var(--primary);
+  --aa-primary-color-rgb: var(--primary-rgb);
+  --aa-selected-color-rgb: var(--primary-rgb);
+  --aa-selected-color-alpha: 1;
+  --aa-detached-modal-max-width: 100%;
+  --aa-detached-modal-max-height: 100%;
+  --aa-icon-size: 24px;
+  --aa-search-input-height: 38px;
+
+  @media (min-width: 1200px) {
+    --aa-detached-modal-max-width: 1040px;
+    --aa-detached-modal-max-height: 700px;
+  }
 
   @media (max-width: 1024px) {
     --header-height: 52px;

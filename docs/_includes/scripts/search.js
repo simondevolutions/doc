@@ -25,7 +25,7 @@ if (autocompleteElement) {
                   indexName: autocompleteElement.dataset.index,
                   query,
                   params: {
-                    hitsPerPage: 18,
+                    hitsPerPage: 16,
                   },
                 },
               ]
@@ -33,9 +33,6 @@ if (autocompleteElement) {
           },
           getItemUrl({ item }) {
             return item.url;
-          },
-          onActive({ item, setContext }) {
-            setContext({ preview: item });
           },
           templates: {
             item({ item, components, html }) {
@@ -104,30 +101,6 @@ if (autocompleteElement) {
         //   },
         // },
       ];
-    },
-    render({ children, render, state, components, html }, root) {
-      const { preview } = state.context;
-
-      render(
-        html`<div className="aa-Grid">
-          <div className="aa-Results aa-Column">${children}</div>
-          <div className="aa-Preview aa-Column">
-            <div className="aa-PreviewTitle">
-              ${components.Highlight({
-                hit: preview,
-                attribute: 'title'
-              })}
-            </div>
-            <div className="aa-PreviewDescription">
-              ${components.Highlight({
-                hit: preview,
-                attribute: 'content'
-              })}
-            </div>
-          </div>
-        </div>`,
-        root
-      );
-    },
+    }
   });
 }

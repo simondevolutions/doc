@@ -25,7 +25,17 @@
   top: 0;
 
   @media (min-width: 1200px) {
-    top: 3%;
+    top: 24px;
+  }
+
+  .aa-PanelLayout {
+    max-height: calc(100vh - 65px);
+    padding: 12px;
+    padding-bottom: 12px;
+
+    @media (min-width: 1200px) {
+      max-height: calc(100vh - 65px - 48px);
+    }
   }
 }
 
@@ -35,21 +45,6 @@
     var(--aa-background-color-alpha)
   );
   padding: calc(var(--aa-spacing-half) * 1.5);
-}
-
-.aa-DetachedContainer .aa-Preview {
-  display: none;
-}
-
-.aa-DetachedContainer--modal .aa-Preview {
-  border-left: 1px solid rgba(var(--aa-panel-border-color-rgb),var(--aa-panel-border-color-alpha));
-  flex-direction: column;
-  padding: 16px 56px;
-  max-width: 50%;
-
-  @media (min-width: 1200px) {
-    display: flex;
-  }
 }
 
 .aa-PreviewImage {
@@ -113,8 +108,13 @@
 }
 
 .aa-Item {
-  border-radius: 0;
-  padding: 4px 16px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 0;
+
+  + .aa-Item {
+    margin-top: 4px;
+  }
 }
 
 .aa-ItemIcon {
@@ -126,11 +126,13 @@
 }
 
 .aa-ItemLink {
+  padding: 4px 12px;
   transition: none;
 }
 
 .aa-Item[aria-selected=true] {
   color: var(--primary-text);
+  background-color: var(--primary);
 
   .aa-ItemContent mark {
     color: var(--primary-text);
@@ -173,10 +175,12 @@
   color: var(--aa-primary-color);
 }
 
+.aa-ItemContentTitle {
+  font-weight: bold;
+}
+
 .aa-ItemContentContent {
-  @media (min-width: 1200px) {
-    display: none;
-  }
+  font-size: 14px;
 }
 
 .aa-DetachedSearchButton {

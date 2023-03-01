@@ -65,7 +65,6 @@
   .nav-item-items {
     height: 0;
     overflow: hidden;
-    transition: height 0.25s ease;
 
     &.active {
       background-color: #f5f5f5;

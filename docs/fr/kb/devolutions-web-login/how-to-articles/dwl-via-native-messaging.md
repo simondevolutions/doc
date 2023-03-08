@@ -6,7 +6,7 @@ title: DWL via la messagerie native
 1. Sous ***Sources de données*** , cliquer sur ***{{ fr.RDM }}*** . 
 1. Cliquer sur ***Avancé*** et cocher la case ***Activer la messagerie native*** et ***Enregistrer*** .  
 ![KB4008.png](/img/fr/kb/KB4008.png) 
-1. Dans {{ fr.RDM }} , aller dans ***Fichier - Options - Extensions de navigateur - Avancé*** .  
+1. Dans {{ fr.RDM }} , aller dans ***Fichier - Options - Extensions de navigateur - Avancé***.  
 ![KB4007.png](/img/fr/kb/KB4007.png) 
 1. Cocher la case ***Activer la messagerie native*** . 
 1. Décocher la case ***Activer écouteur HTTP*** , puis cliquer sur ***OK*** . 

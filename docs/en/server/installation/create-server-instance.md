@@ -17,6 +17,7 @@ Multiple {{ en.RDMS }} instances can be hosted on the same server. Each instance
 
 ## Procedure 
 
+1. Download and run the following script, it is the recommanded way of installing DVLS [Install.ps1](/server/installation/install.ps1) 
 1. Install {{ en.RDMSCONSOLE }} on the web server. It is available from the [Download](https://server.devolutions.net/home/download) page. 
 1. Execute {{ en.RDMSCONSOLE }} with elevated privileges (run as administrator). This is performed by right-clicking on the application, and selecting ***Run as administrator*** . 
 {% snippet icon.shieldWarning %} 

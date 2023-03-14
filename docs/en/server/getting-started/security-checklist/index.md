@@ -10,7 +10,9 @@ These recommendations are valid ONLY if the {{ en.RDMS }} instance is hosted on 
 ## General 
 
 * Use Windows Authentication exclusively. 
-* Ensure all LDAP communication uses [LDAP over SSL](/server/getting-started/security-checklist/ldap-over-ssl/) . 
+* Ensure all LDAP communication uses [LDAP over SSL](https://rb.gy/enaq3a).
+* Run the latest version of DVLS Server.
+* Apply security patched to Windows.
 
 ## SQL Server 
 

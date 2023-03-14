@@ -35,7 +35,7 @@ Store and Manage Business-User Passwords<br>
 <table>
 	<tr>
 		<td>
-{{ en.RDM }} centralizes all remote connections on a single platform that is securely shared between users and across the entire team. 
+{{ en.RDM }} centralizes all remote connections on a single platform that is securely shared between users and across the entire team. This software is a must have!
 		</td>
 		<td>
 {{ en.RDMS }} lets you control access to privileged accounts and manage remote sessions through a secure solution that can be deployed on-premises. 

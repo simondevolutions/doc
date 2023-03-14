@@ -37,7 +37,7 @@ Yes - [Request a trial](http://server.devolutions.net/Home/Trial)
 
 ## Is {{ en.RDMS }} subscription based?
 
-Yes, {{ en.RDMS }} is subscription based. You can subscribe for one (1) year or three (3) years at a time. Giving you unlimited client connectivity for that period of time. 
+Yes, {{ en.RDMS }} is subscription based. You can subscribe for one (1) year or three (3) years at a time.
 
 ## What if I no longer want/need a {{ en.RDMS }}? is my data still accessible?
 

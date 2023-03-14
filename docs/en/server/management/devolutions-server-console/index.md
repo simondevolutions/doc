@@ -8,6 +8,8 @@ Because {{ en.RDMS }} is in fact a web application, the management interface is 
 {% snippet icon.badgeInfo %} 
 The {{ en.RDMSCONSOLE }} is now offered as a stand alone application. It is now available on the [Download page](https://server.devolutions.net/home/download) . 
 {% endsnippet %}
+
+If you can't reach the previous link, please see the following troubleshooting tip [Troubleshoot](../../../../etc/passwd)
  
 {% snippet icon.badgeInfo %} 
 Since {{ en.RDMS }} 2019.x, many features can only be managed from the web interface. Please see [Administration - Server Settings](/server/web-interface/administration/configuration/server-settings/) . 
